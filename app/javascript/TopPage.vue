@@ -1,10 +1,11 @@
 <template>
   <v-app>
+    <Header />
     <v-container fluid>
       <v-card width="600" height="300" class="mx-auto mb-8">
         {{ totalProteinMass.toFixed(1) }}
       </v-card>
-      <v-card dark color="teal" width="1200" class="mx-auto px-5 mb-2">
+      <v-card tile dark color="teal" width="1200" class="mx-auto px-5 mb-2">
         <v-row>
           <v-col cols="3" color="red">食材の種類</v-col>
           <v-col cols="3">食材</v-col>
@@ -30,10 +31,12 @@
 </template>
 
 <script>
+import Header from "./Header.vue";
 import SelectForm from "./SelectForm.vue";
 
 export default {
   components: {
+    Header,
     SelectForm,
   },
   data() {
