@@ -1,17 +1,30 @@
 <template>
   <v-app>
     <v-container fluid>
-      {{ totalProteinMass.toFixed(1) }}
-      <SelectForm @pm="setProteinMass1" />
-      <SelectForm @pm="setProteinMass2" />
-      <SelectForm @pm="setProteinMass3" />
-      <SelectForm @pm="setProteinMass4" />
-      <SelectForm @pm="setProteinMass5" />
-      <SelectForm @pm="setProteinMass6" />
-      <SelectForm @pm="setProteinMass7" />
-      <SelectForm @pm="setProteinMass8" />
-      <SelectForm @pm="setProteinMass9" />
-      <SelectForm @pm="setProteinMass10" />
+      <v-card width="600" height="300" class="mx-auto mb-8">
+        {{ totalProteinMass.toFixed(1) }}
+      </v-card>
+      <v-card dark color="teal" width="1200" class="mx-auto px-5 mb-2">
+        <v-row>
+          <v-col cols="3" color="red">食材の種類</v-col>
+          <v-col cols="3">食材</v-col>
+          <v-col cols="2" class="text-center">100g当たり</v-col>
+          <v-col cols="2" class="text-center">食材の量</v-col>
+          <v-col cols="2" class="text-center">タンパク質量</v-col>
+        </v-row>
+      </v-card>
+      <v-card tile width="1200" class="mx-auto px-5">
+        <SelectForm @pm="setProteinMass01" />
+        <SelectForm @pm="setProteinMass02" />
+        <SelectForm @pm="setProteinMass03" />
+        <SelectForm @pm="setProteinMass04" />
+        <SelectForm @pm="setProteinMass05" />
+        <SelectForm @pm="setProteinMass06" />
+        <SelectForm @pm="setProteinMass07" />
+        <SelectForm @pm="setProteinMass08" />
+        <SelectForm @pm="setProteinMass09" />
+        <SelectForm @pm="setProteinMass10" />
+      </v-card>
     </v-container>
   </v-app>
 </template>
@@ -25,45 +38,45 @@ export default {
   },
   data() {
     return {
-      proteinMass1: 0,
-      proteinMass2: 0,
-      proteinMass3: 0,
-      proteinMass4: 0,
-      proteinMass5: 0,
-      proteinMass6: 0,
-      proteinMass7: 0,
-      proteinMass8: 0,
-      proteinMass9: 0,
+      proteinMass01: 0,
+      proteinMass02: 0,
+      proteinMass03: 0,
+      proteinMass04: 0,
+      proteinMass05: 0,
+      proteinMass06: 0,
+      proteinMass07: 0,
+      proteinMass08: 0,
+      proteinMass09: 0,
       proteinMass10: 0,
     };
   },
   methods: {
-    setProteinMass1(pm) {
-      this.proteinMass1 = pm;
+    setProteinMass01(pm) {
+      this.proteinMass01 = pm;
     },
-    setProteinMass2(pm) {
-      this.proteinMass2 = pm;
+    setProteinMass02(pm) {
+      this.proteinMass02 = pm;
     },
-    setProteinMass3(pm) {
-      this.proteinMass3 = pm;
+    setProteinMass03(pm) {
+      this.proteinMass03 = pm;
     },
-    setProteinMass4(pm) {
-      this.proteinMass4 = pm;
+    setProteinMass04(pm) {
+      this.proteinMass04 = pm;
     },
-    setProteinMass5(pm) {
-      this.proteinMass5 = pm;
+    setProteinMass05(pm) {
+      this.proteinMass05 = pm;
     },
-    setProteinMass6(pm) {
-      this.proteinMass6 = pm;
+    setProteinMass06(pm) {
+      this.proteinMass06 = pm;
     },
-    setProteinMass7(pm) {
-      this.proteinMass7 = pm;
+    setProteinMass07(pm) {
+      this.proteinMass07 = pm;
     },
-    setProteinMass8(pm) {
-      this.proteinMass8 = pm;
+    setProteinMass08(pm) {
+      this.proteinMass08 = pm;
     },
-    setProteinMass9(pm) {
-      this.proteinMass9 = pm;
+    setProteinMass09(pm) {
+      this.proteinMass09 = pm;
     },
     setProteinMass10(pm) {
       this.proteinMass10 = pm;
@@ -72,15 +85,15 @@ export default {
   computed: {
     totalProteinMass: function () {
       return (
-        this.proteinMass1 +
-        this.proteinMass2 +
-        this.proteinMass3 +
-        this.proteinMass4 +
-        this.proteinMass5 +
-        this.proteinMass6 +
-        this.proteinMass7 +
-        this.proteinMass8 +
-        this.proteinMass9 +
+        this.proteinMass01 +
+        this.proteinMass02 +
+        this.proteinMass03 +
+        this.proteinMass04 +
+        this.proteinMass05 +
+        this.proteinMass06 +
+        this.proteinMass07 +
+        this.proteinMass08 +
+        this.proteinMass09 +
         this.proteinMass10
       );
     },

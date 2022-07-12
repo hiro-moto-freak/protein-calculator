@@ -1,6 +1,6 @@
 <template>
   <v-row align="center">
-    <v-col cols="3">
+    <v-col cols="3" class="text-center">
       <v-select
         @click="setSubcategories"
         v-model="categories"
@@ -10,7 +10,7 @@
         return-object
       ></v-select>
     </v-col>
-    <v-col cols="3">
+    <v-col cols="3" class="text-center">
       <v-select
         @change="setProteinContent"
         v-model="subcategories"
@@ -20,20 +20,22 @@
         item-value="proteinContent"
       ></v-select>
     </v-col>
-    <v-col cols="2">{{ proteinContent }}g </v-col>
-    <v-col cols="2">
-      <input
-        class="text-right"
-        @click="pmSubmit"
+    <v-col cols="2" class="text-center"
+      >{{ proteinContent.toFixed(1) }} g
+    </v-col>
+    <v-col cols="2" class="d-flex align-center">
+      <v-text-field
+        @change="pmSubmit"
         type="number"
         step="10"
         min="0"
         v-model.number="foodMass"
         placeholder="食材の量を入力"
-      />
+        class="right-input"
+      ></v-text-field>
       g
     </v-col>
-    <v-col cols="2">{{ proteinMass.toFixed(1) }}g </v-col>
+    <v-col cols="2" class="text-center">{{ proteinMass.toFixed(1) }} g </v-col>
   </v-row>
 </template>
 
@@ -147,9 +149,8 @@ export default {
 };
 </script>
 
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
+<style>
+.right-input input {
+  text-align: right;
 }
 </style>
