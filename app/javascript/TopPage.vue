@@ -1,11 +1,49 @@
 <template>
   <v-app>
     <Header />
-    <v-container fluid>
-      <v-card width="600" height="300" class="mx-auto mb-8">
-        {{ totalProteinMass.toFixed(1) }}
+    <v-container fluid mt-5>
+      <v-card flat class="mx-auto pa-2 mb-5 text-center">
+        <v-card flat>ProCalは簡単タンパク質量計算サイトです。 </v-card>
+        <v-card flat>
+          食材を選択し、量を入力してください。自動で総タンパク質量を計算します
+        </v-card>
       </v-card>
-      <v-card tile dark color="teal" width="1200" class="mx-auto px-5 mb-2">
+      <v-card tile width="600" class="mx-auto mb-8 pb-5">
+        <v-card
+          dark
+          tile
+          width="600"
+          color="blue-grey"
+          class="of-rem text-center py-1 mb-5"
+        >
+          計算結果
+        </v-card>
+        <v-card flat class="d-flex">
+          <v-card flat class="ml-auto mr-1 mt-auto mb-1 otf-rem">
+            総タンパク質量は
+          </v-card>
+          <v-card
+            outlined
+            min-width="230"
+            height="110"
+            class="pr-3 text-right font-weight-light five-rem"
+          >
+            {{ totalProteinMass.toFixed(1) }}
+          </v-card>
+          <v-card flat height="110" class="font-weight-light five-rem">
+            g
+          </v-card>
+          <v-card flat class="mr-auto ml-1 mb-1 mt-auto otf-rem">です</v-card>
+        </v-card>
+        <v-card></v-card>
+      </v-card>
+      <v-card
+        tile
+        dark
+        color="blue-grey"
+        width="1200"
+        class="mx-auto px-5 mb-2"
+      >
         <v-row>
           <v-col cols="3" color="red">食材の種類</v-col>
           <v-col cols="3">食材</v-col>
@@ -14,7 +52,7 @@
           <v-col cols="2" class="text-center">タンパク質量</v-col>
         </v-row>
       </v-card>
-      <v-card tile width="1200" class="mx-auto px-5">
+      <v-card tile width="1200" class="mx-auto mb-8 px-5">
         <SelectForm @pm="setProteinMass01" />
         <SelectForm @pm="setProteinMass02" />
         <SelectForm @pm="setProteinMass03" />
@@ -104,5 +142,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.five-rem {
+  font-size: 5rem;
+}
+.otf-rem {
+  font-size: 1.25rem;
+}
+.of-rem {
+  font-size: 1.5rem;
+}
 </style>

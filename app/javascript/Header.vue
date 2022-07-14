@@ -1,6 +1,6 @@
 <template>
   <v-card class="mx-auto" width="1200" flat tile>
-    <v-toolbar height="100" color="teal">
+    <v-toolbar height="100" color="blue-grey">
       <v-img
         class="mx-auto"
         max-height="120"
@@ -11,5 +11,5 @@
   </v-card>
 </template>
 
-<script>
-</script>
+<style>
+</style>
