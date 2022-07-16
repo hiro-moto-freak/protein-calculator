@@ -143,13 +143,4 @@ export default {
 </script>
 
 <style>
-.five-rem {
-  font-size: 5rem;
-}
-.otf-rem {
-  font-size: 1.25rem;
-}
-.of-rem {
-  font-size: 1.5rem;
-}
 </style>

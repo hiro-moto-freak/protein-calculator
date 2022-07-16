@@ -150,7 +150,4 @@ export default {
 </script>
 
 <style>
-.right-input input {
-  text-align: right;
-}
 </style>
