@@ -5,6 +5,11 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
+require("@rails/ujs").start()
+//require("turbolinks").start()
+require("@rails/activestorage").start()
+require("channels")
+
 import Vue from 'vue'
 import Vuetify from "vuetify"
 import "vuetify/dist/vuetify.min.css"
