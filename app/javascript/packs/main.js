@@ -14,6 +14,7 @@ import Vue from 'vue'
 import Vuetify from "vuetify"
 import "vuetify/dist/vuetify.min.css"
 import TopPage from '../TopPage.vue'
+import SignupForm from '../devise/registrations/SignupForm.vue'
 
 Vue.use(Vuetify)
 
@@ -22,6 +23,7 @@ new Vue({
   el: '#protein-calculator',
   components: {
     TopPage,
+    SignupForm
   }
 })
 

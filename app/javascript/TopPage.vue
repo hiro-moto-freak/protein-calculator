@@ -44,7 +44,7 @@
             dark
             color="teal"
             class="mr-2"
-            href="http://localhost:3000/users/sign_in"
+            href="http://0.0.0.0:3000/users/sign_in"
           >
             ログイン
           </v-btn>
@@ -52,7 +52,7 @@
             dark
             color="teal"
             class="ml-2"
-            href="http://localhost:3000/users/sign_up"
+            href="http://0.0.0.0:3000/users/sign_up"
           >
             新規登録
           </v-btn>
