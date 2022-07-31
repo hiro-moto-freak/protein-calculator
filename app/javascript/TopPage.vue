@@ -18,7 +18,7 @@
         >
           計算結果
         </v-card>
-        <v-card flat class="d-flex">
+        <v-card flat class="d-flex mb-5">
           <v-card flat class="ml-auto mr-1 mt-auto mb-1 otf-rem">
             総タンパク質量は
           </v-card>
@@ -35,7 +35,28 @@
           </v-card>
           <v-card flat class="mr-auto ml-1 mb-1 mt-auto otf-rem">です</v-card>
         </v-card>
-        <v-card></v-card>
+
+        <v-card flat class="text-center mb-2">
+          数値を記録するためにはログインしてください
+        </v-card>
+        <v-card flat class="d-flex justify-center">
+          <v-btn
+            dark
+            color="teal"
+            class="mr-2"
+            href="http://localhost:3000/users/sign_in"
+          >
+            ログイン
+          </v-btn>
+          <v-btn
+            dark
+            color="teal"
+            class="ml-2"
+            href="http://localhost:3000/users/sign_up"
+          >
+            新規登録
+          </v-btn>
+        </v-card>
       </v-card>
       <v-card
         tile
