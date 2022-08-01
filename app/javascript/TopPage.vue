@@ -57,6 +57,7 @@
             新規登録
           </v-btn>
         </v-card>
+        <v-btn href="http://0.0.0.0:3000/users/sign_out">ログアウト</v-btn>
       </v-card>
       <v-card
         tile
